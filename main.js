@@ -84,7 +84,7 @@ const finishMassage = document.querySelector(".finish");
 const diffbtn = document.querySelector(".changedef2");
 const btns = document.querySelectorAll(".btn");
 
-// DOm Info fill
+// DOM Info fill
 function fillDom() {
   lvlname.textContent = LevelName;
   seconds.textContent = levelSeconds;
@@ -97,7 +97,7 @@ fillDom();
 input.onpaste = function () {
   return false;
 };
-//diff change
+//difficulty change
 diffbtn.onclick = function () {
   if (LevelName === "Easy") {
     LevelName = "Normal";
@@ -136,7 +136,7 @@ function genword() {
     div.appendChild(txt);
     upcomingword.appendChild(div);
   }
-  // show the worddw
+  // show the word
   theWord.textContent = randomword;
   //start the game
   startplay();
@@ -168,9 +168,7 @@ function startplay() {
         span.appendChild(spantxt);
         finishMassage.appendChild(span);
       }
-
       clearInterval(start);
     }
   }, 1000);
-  // ceack the word
 }
